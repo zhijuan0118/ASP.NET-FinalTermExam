@@ -1,0 +1,50 @@
+﻿@model ASPFinalExam.Models.CustomerSearchArg
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>客戶資料查詢</h2>
+<script src="~/Scripts/IndexJS.js"></script>
+@using (Html.BeginForm("Index", "Customer", FormMethod.Post, new { id = "Form" }))
+{
+    <div>
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <td>客戶編號</td>
+                    <td>
+                        <input type="text" id="CustomerId" name="CustomerId" class="k-textbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>客戶名稱</td>
+                    <td>
+                        <input type="text" id="CompanyName" name="CompanyName" class="k-textbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>聯絡人姓名</td>
+                    <td>
+                        <input type="text" id="ContactName" name="ContactName" class="k-textbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>聯絡人職稱</td>
+                    <td>
+                        <input type="text" id="ContactTitle" name="ContactTitle"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" id="SearchBtn" value="查詢" />
+                        <input type="reset" id="ResetBtn" value="清除" />
+                        <input type="button" id="InsertBtn" value="新增客戶" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div>查詢結果</div>
+        <div id="grid"></div>
+    </div>
+}

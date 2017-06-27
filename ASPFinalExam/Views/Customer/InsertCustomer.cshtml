@@ -1,0 +1,110 @@
+﻿@model ASPFinalExam.Models.Customer
+@{
+    ViewBag.Title = "InsertCustomer";
+}
+
+
+@using (Html.BeginForm("InsertCustomer", "Customer", FormMethod.Post, new { id = "Form" }))
+{
+
+    <div>
+        <h2>新增客戶</h2>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>名稱
+                </td>
+                <td>
+                    <input id="CompanyName" name="CompanyName" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>聯絡人姓名
+                </td>
+                <td>
+                    <input id="ContactName" name="ContactName" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>聯絡人職稱
+                </td>
+                <td>
+                    <input id="ContactTitle" name="ContactTitle" required data-required-msg="請選擇聯絡人職稱" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>建立日期
+                </td>
+                <td>
+                    <input id="CreationDate" name="CreationDate" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>國家
+                </td>
+                <td>
+                    <input id="Country" name="Country" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>城市
+                </td>
+                <td>
+                    <input id="City" name="City" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    區域
+                </td>
+                <td>
+                    <input id="Region" name="Region" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    郵遞區號
+                </td>
+                <td>
+                    <input id="PostalCode" name="PostalCode" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>地址
+                </td>
+                <td>
+                    <input id="Address" name="Address" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="require" style="color:red">*</span>電話
+                </td>
+                <td>
+                    <input id="Phone" name="Phone" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    傳真
+                </td>
+                <td>
+                    <input id="Fax" name="Fax" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="button" id="InsertBtn">存檔</button>
+                    <button type="button" id="BackBtn">回前一頁</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+}
